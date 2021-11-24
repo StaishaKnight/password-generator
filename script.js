@@ -1,10 +1,18 @@
 // Assignment code here
-
+var numberArray =  ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var specialArray = [  '@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
+var lowercaseArray = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];
+var uppercaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
 // function to generate a random numeric value
 
+//function for chosen array//
+
+//fucntion to get user input//
+
+//Generate password function to tie user input and random function//
+
+
   
-  return value;
-};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
