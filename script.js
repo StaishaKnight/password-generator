@@ -4,7 +4,11 @@ var specialArray = [  '@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^'
 var lowercaseArray = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];
 var uppercaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
 // function to generate a random numeric value
-
+function shufflearray (array) {
+  var randomindex= Math.floor(Math.random()*array.length) 
+  var indexvalue=array[randomindex]
+  return indexvalue 
+}
 //function for chosen array//
 
 //fucntion to get user input//
