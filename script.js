@@ -6,18 +6,20 @@ var uppercaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J
 // function to generate a random numeric value
 function shufflearray (array) {
   var randomindex= Math.floor(Math.random()*array.length) 
+  console.log(randomindex)
   var indexvalue=array[randomindex]
+  console.log(indexvalue)
   return indexvalue 
 }
 //function for chosen array//
-
+shufflearray(lowercaseArray)
 //fucntion to get user input//
 function promptuser () {
-  var passwordlength= prompt ("how long would you like your password to be?")  
+  var passwordlength= prompt ("How long would you like your password to be?")  
 
-  var confirmnumber= confirm ("would you like to use numbers in your password")
-  var confirmuppercase= confirm ("would you like to use uppercase letters in your password")
-  var confirmlowercase= confirm (" would you like to use lowercase letters in your password")
+  var confirmnumber= confirm ("Would you like to use numbers in your password")
+  var confirmuppercase= confirm ("Would you like to use uppercase letters in your password")
+  var confirmlowercase= confirm ("Would you like to use lowercase letters in your password")
 
 
 
@@ -33,7 +35,41 @@ function promptuser () {
 }
 
 //Generate password function to tie user input and random function//
+function generatepassword(){
+  var getuserchoices= promptuser ()
+  var possiblecharacters= []
+  var newpassword= []
 
+  if(getuserchoices.choicelowercase=== true) {
+    possiblecharacters=possiblecharacters.concat(lowercaseArray)
+    possiblecharacters.push(shufflearray(lowercaseArray))
+  }
+
+  if(getuserchoices.choiceuppercase=== true){
+    possiblecharacters=possiblecharacters.concat(uppercaseArray)
+    possiblecharacters.push(shufflearray(uppercaseArray))
+  }
+
+  if(getuserchoices.choicenumbercase=== true){
+    possiblecharacters=possiblecharacters.concat(numbercaseArray)
+    possiblecharacters.push(shufflearray(numbercaseArray))
+  }
+
+  if(getuserchoices.choicespecial=== true){
+    possiblecharacters=possiblecharacters.concat(specialArray)
+    possiblecharacters.push(shufflearray(specialArray))
+  }
+  
+
+for(var i=0; i<getuserchoices.choicelength;i++){
+  var stagedpassword=shufflearray(possiblecharacters)
+  newpassword.push(stagedpassword)
+}  
+console.log(newpassword)
+
+return newpassword.join("")
+
+}
 
   
 
@@ -42,7 +78,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = promptuser();
+  var password = generatepassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
